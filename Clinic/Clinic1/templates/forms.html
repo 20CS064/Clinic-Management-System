@@ -1,0 +1,101 @@
+<html>
+
+    <head>
+        <title>DOCTOR PAGE</title>
+        <link rel="stylesheet" type="text/css" href="/static/style3.css">
+        <!-- Add icon library -->
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+    </head>
+    <body>
+
+        <nav>
+            <input type="checkbox" id="check">
+            <label for="check" class="checkbtn">
+              <i class="fas fa-bars"></i>
+            </label>
+            <label class="logo">Manali Clinic<img src="Manali Clinic.png" alt=""></label>
+            <ul>
+              <li><a class="active" href="index.html">Home</a></li>
+              <li><a href="login.html">Login</a></li>
+              <li><a href="#">Book Appointment</a></li>
+              <li><a href="#">Patient</a></li>
+              <li><a href="#">About us</a></li>
+            </ul>
+          </nav>
+
+        <div class="container">
+        <h1>DOCTOR'S PAGE</h1>
+        <div class="form-container">
+        <form method='post'>
+            {%csrf_token%}
+            <div class="input-name">
+                <i class="fa fa-id-badge"></i>
+                <input type="text" placeholder="Pateint ID" name="PID" required class="text-name">
+                        </div>
+                        <div class="input-name">
+                            <i class="fa fa-scribd"></i>
+                    <select class="Symptom" name="Symptom">
+                        <option style="text-align:center;">Select a Symptom</option>
+                        <option value="Fever" style="text-align:right;">Fever</option>
+                        <option value="Headache" style="text-align:right;">Headache</option>
+                        <option value="Weight loss" style="text-align:right;">Weight loss</option>
+                        <option value="Dizziness" style="text-align:right;">Dizziness</option>
+                        <option value="Jaundice" style="text-align:right;">Jaundice</option>
+                        <option value="chest pain" style="text-align:right;">Chest pain</option>
+                        <option value="Back pain" style="text-align:right;">Back pain</option>
+                        <option value="Anxiety" style="text-align:right;">Anxiety</option>
+                        <option value="Muscle weakness" style="text-align:right;">Muscle weakness</option>
+                        <option value="Shivering" style="text-align:right;">Shivering</option>
+                        <option value="High BP" style="text-align:right;">High BP</option>
+                        <option value="other" style="text-align:right;">Other</option>
+                    </select>
+                    <span>
+                        <input type="text" placeholder="Other Symptom " name="OtherSymptom" class="name">
+                    </span>
+                </div>
+                <div class="input-name">
+                    <i class="fa fa-stethoscope"></i>
+                       <select class="DiseaseDetected" name="Disease">
+                            <option style="text-align: center;">Select Disease Detected</option>
+                            <option value="Flu" style="text-align:right;">Flu</option>
+                            <option value="Chickenpox" style="text-align:right;">Chickenpox</option>
+                            <option value="Asthma" style="text-align:right;">Asthma</option>
+                            <option value="Diabetes" style="text-align:right;">Diabetes</option>
+                            <option value="Obesity" style="text-align:right;">Obesity</option>
+                            <option value="Tuberculosis" style="text-align:right;">Tuberculosis</option>
+                            <option value="Atack" style="text-align:right;">Atack</option>
+                            <option value="Cancer" style="text-align:right;">Cancer</option>
+                            <option value="Knot found" style="text-align:right;">Knot found</option>
+                            <option value="Polio" style="text-align:right;">Polio</option>
+                            <option value="other" style="text-align:right;">Other</option>
+                        </select>
+                        <span>
+                        <input type="text" placeholder="Other Disease"  name="OtherDisease" class="name">
+                    </span>
+                    </div>
+                    <div class="input-name">
+                        <i class="fa fa-medkit"></i>
+                        <input type="text" placeholder="Medicine Prescription" required class="text-name">
+                        <textarea  class="prescrip" name="Medicineprescription" id="" cols="30" rows="10"></textarea>
+                                </div>
+                                <div class="input-name">
+                                    <i class="fa fa-file-text"></i>
+                                    <input type="text" placeholder="Required Test Reports" name="Report" required class="text-name">
+                                            </div>
+                                            <div class="input-name">
+                                                <i class="fa fa-book"></i>
+                                                <input typt="text" placeholder="Next Appoinment" name="Appoinment" required class="text-name">
+                                            </div>
+                                            <div class="input-name">
+                                                <i class="fa fa-money"></i>
+                                                <input type="text" placeholder="Payment Charges" name="Charges" required class="text-name">
+                                            </div>
+                                                       <div class="input-name">
+                                                        <input type="submit" class="button" value="SAVE">
+                                                                </div>
+        </form>
+        </div>
+        </div>
+        </body>
+</html>
+

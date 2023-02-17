@@ -1,0 +1,47 @@
+<!DOCTYPE html>
+<html lang="en" dir="ltr">
+  <head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="/static/style2.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.2/css/all.min.css"/>
+    <script src="https://kit.fontawesome.com/a076d05399.js"></script>
+  </head>
+  <body>
+    <nav>
+      <input type="checkbox" id="check">
+      <label for="check" class="checkbtn">
+        <i class="fas fa-bars"></i>
+      </label>
+      <label class="logo">Manali Clinic<img src="/static/Manali Clinic.png" alt=""></label>
+      <ul>
+        <li><a class="active" href="home">Home</a></li>
+        <li><a href="login">Login</a></li>
+        <li><a href="appointment">Book Appointment</a></li>
+        <li><a href="Patient-Login">Patient</a></li>
+        <li><a href="about">About us</a></li>
+      </ul>
+    </nav>
+    <div class="container">
+      <div class="wrapper">
+        <div class="title"><span>Patient Details</span></div>
+        <form action="" method="POST">
+          {% csrf_token %}
+          <div class="row">
+            <i class="fas fa-user"></i>
+            <input type="text" placeholder="Username" name="PUsername" required>
+          </div>
+          <div class="row">
+            <i class="fas fa-lock"></i>
+            <input type="password" placeholder="Password" name="PPassword" required>
+          </div>
+          <div class="row button">
+            <input type="submit" value="Login">
+          </div>
+        </form>
+      </div>
+    </div>
+
+
+  </body>
+</html>

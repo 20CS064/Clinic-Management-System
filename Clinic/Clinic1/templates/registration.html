@@ -1,0 +1,99 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="/static/style1.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.2/css/all.min.css"/>
+    <title>Registration</title>
+</head>
+<body>
+    
+    <nav>
+        <input type="checkbox" id="check">
+        <label for="check" class="checkbtn">
+          <i class="fas fa-bars"></i>
+        </label>
+        <label class="logo">Manali Clinic<img src="/static/Manali Clinic.png" alt=""></label>
+        <ul>
+          <li><a class="active" href="home">Home</a></li>
+          <li><a href="login">Login</a></li>
+          <li><a href="appointment">Book Appointment</a></li>
+          <li><a href="Patient-Login">Patient</a></li>
+          <li><a href="about">About us</a></li>
+        </ul>
+      </nav>
+    
+    <div class="container">
+        <div class="wrapper">
+            <div class="title"><span>Registration Form</span></div>
+            <form action="/register" method="post">
+
+                {% csrf_token %}            
+                <div class="row">
+                    <h3>Patient ID</h3>
+                    <input type="text" name="PID" id="PID" required>
+                </div>
+                <div class="row">
+                    <h3>Name</h3>
+                    <input type="text" name="Name" id="Name" required>
+                </div>
+               <div class="row">
+                    <h3>Age</h3>
+                    <input type="number" name="Age" id="Age" required>
+                </div>
+                <div class="row">
+                    <h3>DOB</h3>
+                    <input type="date" name="DOB" id="DOB" required>
+                </div>
+                <div class="row">
+                    <h3>Gender</h3>
+                    <select name="gender" id="gender">
+                        <option value="none" disabled selected></option>
+                        <option value="male">Male</option>
+                        <option value="female">Female</option>
+                        <option value="other">Other</option>
+                    </select>
+                </div>
+                <div class="row">
+                    <h3>Blood Group</h3>
+                    <select name="BG" id="BG" class="bg">
+                        <option value="none" disabled selected></option>
+                        <option value="A+">A+</option>
+                        <option value="A-">A-</option>
+                        <option value="B+">B+</option>
+                        <option value="B-">B-</option>
+                        <option value="AB+">AB+</option>
+                        <option value="AB-">AB-</option>
+                        <option value="O+">O+</option>
+                        <option value="O-">O-</option>
+                    </select>
+                </div>
+                <div class="row">
+                    <h3>Phone Number</h3>
+                    <input type="text" name="PN" id="PN" onkeypress="return event.charCode >= 48 && event.charCode <= 57" minlength="10" maxlength="10" required />
+                </div>
+
+                <div class="row">
+                    <h3>Email</h3>
+                    <input type="email" name="email" id="email" required>
+                  </div>
+
+                <div class="row">
+                    <h3>Address</h3>
+                    <input type="text" name="Add" id="Add" required>
+                  </div>
+               <!-- <div class="row">
+                    <h3>Password</h3>
+                    <input type="Password" name="Password" id="Password" required>
+                </div>-->
+                
+                <div class="row button">
+                    <input type="submit" value="Submit">
+                  </div> 
+            </form>
+        </div>
+    </div>
+</body>
+</html>

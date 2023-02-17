@@ -1,0 +1,51 @@
+
+<!DOCTYPE html>
+      <html lang="en" dir="ltr">
+        <head>
+          <meta charset="utf-8">
+          <title></title>
+          <link rel="stylesheet" href="/static/contact_us.css">
+          <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+      <link href="https://fonts.googleapis.com/css2?family=Merriweather:wght@400;700;900&display=swap" rel="stylesheet">
+          <meta name="viewport" content="width=device-width, initial-scale=1">
+        </head>
+        <body>
+
+          <nav>
+            <input type="checkbox" id="check">
+            <label for="check" class="checkbtn">
+              <i class="fas fa-bars"></i>
+            </label>
+            <label class="logo">Manali Clinic<img src="/static/Manali Clinic.png" alt=""></label>
+            <ul>
+              <li><a class="active" href="home">Home</a></li>
+              <li><a href="login">Login</a></li>
+              <li><a href="appointment">Book Appointment</a></li>
+              <li><a href="Patient-Login">Patient</a></li>
+              <li><a href="about">About us</a></li>
+            </ul>
+          </nav>
+      
+      <div class="contact-section">
+      
+        <h1>Contact Us</h1>
+        <div class="border"></div>
+        
+        
+        <form class="contact-form" method="post" action="contact">
+
+            {%csrf_token%}
+
+          <input type="text" class="contact-form-text" placeholder="Your name" name="name" id="email" required>
+          <input type="email" class="contact-form-text" placeholder="Your email" name="email" id="email" required>
+          <input type="text" class="contact-form-text" placeholder="Your phone" maxlength="10" name="phone" id="phone" required>
+          <textarea class="contact-form-text" placeholder="Your message" name="desc" id="desc" required></textarea>
+          <input type="submit" class="contact-form-btn" value="Send">
+        </form>
+      </div>
+      
+      
+        </body>
+      </html>
+</body>
+</html>
